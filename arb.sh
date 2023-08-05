@@ -5,41 +5,41 @@ apt install mugshot xfce4-terminal -y
 update-alternatives --set x-terminal-emulator /usr/bin/xfce4-terminal.wrapper
 
 # Install themes, icons, cursors, and fonts
-mkdir ~/.themes
-mkdir ~/.local/share/icons
-mv GTK-XFWM-Theme/Ever* ~/.themes
-unzip Nordzy-cyan-dark-MOD.zip -d ~/.local/share/icons
+mkdir $HOME/.themes
+mkdir $HOME/.local/share/icons
+mv GTK-XFWM-Theme/Ever* $HOME/.themes
+unzip Nordzy-cyan-dark-MOD.zip -d $HOME/.local/share/icons
 git clone https://github.com/alvatip/Radioactive-nord.git
 cd Radioactive-nord
 sudo ./install.sh
 cd ..
-unzip fonts.zip -d ~/.local/share/
+unzip fonts.zip -d $HOME/.local/share/
 
 # Installing Kvantum theme and fonts
 sudo apt install qt5-style-kvantum qt5-style-kvantum-themes -y
-cp -r Kvantum ~/.config/
+cp -r Kvantum $HOME/.config/
 
 # Config LightDM Login Manager
-sudo cp -r ~/.themes/GTK-XFWM-Everblush-Theme/Everblush /usr/share/themes
-sudo cp -Rv ~/.local/share/icons/Nordzy-cyan-dark-MOD /usr/share/icons
+sudo cp -r $HOME/.themes/GTK-XFWM-Everblush-Theme/Everblush /usr/share/themes
+sudo cp -Rv $HOME/.local/share/icons/Nordzy-cyan-dark-MOD /usr/share/icons
 sudo mv  lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Installing and Config Picom
 sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libpcre3-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev meson -y
 sudo apt install picom -y
-cp picom-config/picom.conf ~/.config
+cp picom-config/picom.conf $HOME/.config
 sudo xfconf-query -c xfwm4 -p /general/use_compositing -t bool -s false
 
 # Configure xfce4-panel and dock-like plugin
 ## Panel
-cp -r home-config/.assets ~/
-mv ~/.profile ~/.profile.old
-cp home-config/.profile ~/
-cp home-config/.Xresources ~/
-cp gtk.css ~/.config/gtk-3.0
-cp -r genmon-scripts ~
-mv ~/.config/xfce4 ~/.config/xfce4.old
-cp -r xfce4 ~/.config/
+cp -r home-config/.assets $HOME/
+mv $HOME/.profile $HOME/.profile.old
+cp home-config/.profile $HOME/
+cp home-config/.Xresources $HOME/
+cp gtk.css $HOME/.config/gtk-3.0
+cp -r genmon-scripts $HOME
+mv $HOME/.config/xfce4 $HOME/.config/xfce4.old
+cp -r xfce4 $HOME/.config/
 
 
 ## Dock-like Plugin
