@@ -83,7 +83,14 @@ cp i3lock-color-everblush/i3lock-everblush /usr/bin
 unzip wallpapers.zip
 cp -r wallpapers /usr/share/backgrounds
 
-echo "REBOOT me please" 
+while true; do
+	read -p "A reboot is required. Would you like to reboot now? [Y/n] " yn
+	case $yn in
+ 		[Yy]* ) reboot now; exit;;
+	  	[Nn]* ) exit;;
+		* ) echo "Please answer yes or no.";;
+	esac
+done
 
 
 
