@@ -1,7 +1,7 @@
 [Configuration]
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
-MiscBordersDefault=TRUE
+MiscBordersDefault=FALSE
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_UNDERLINE
 MiscDefaultGeometry=78x23
@@ -17,7 +17,7 @@ MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 ScrollingLines=999999
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
-BackgroundDarkness=1.000000
+BackgroundDarkness=0.850000
 MiscBellUrgent=FALSE
 MiscMouseWheelZoom=TRUE
 MiscMiddleClickOpensUri=FALSE

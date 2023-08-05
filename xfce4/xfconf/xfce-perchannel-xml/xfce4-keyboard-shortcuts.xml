@@ -59,8 +59,8 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;s" type="string" value="xfce4-screenshooter"/>
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="&lt;Super&gt;c" type="string" value="picom_toggle"/>
-      <property name="&lt;Shift&gt;s" type="string" value="eww open --toggle sidebar"/>
-      <property name="&lt;Shift&gt;l" type="string" value="i3lock-everblush"/>
+      <property name="&lt;Shift&gt;s" type="empty" value="eww open --toggle sidebar"/>
+      <property name="&lt;Super&gt;l" type="string" value="i3lock-everblush"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

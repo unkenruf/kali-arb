@@ -76,6 +76,10 @@ apt install i3lock-color -y
 xfconf-query --create -c xfce4 session -p /general/LockCommand -t string -s "i3lock-everblush"
 cp i3lock-color-everblush/i3lock-everblush /usr/bin
 
+# Wallpapers
+unzip wallpapers.zip
+cp -r wallpapers /usr/share/backgrounds
+
 echo "REBOOT me please" 
 
 
