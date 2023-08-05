@@ -49,6 +49,9 @@ cp home-config/.Xresources /home/$real_user/
 cp gtk.css /home/$real_user/.config/gtk-3.0
 cp -r genmon-scripts /home/$real_user
 mv /home/$real_user/.config/xfce4 /home/$real_user/.config/xfce4.old
+sed -i "s/kali/$USER/g" xfce4/panel/genmon*
+sed -i "s/kali/$USER/g" xfce4/panel/whisker*
+sed -i "s/kali/$USER/g" xfce4/panel/launcher-1/*
 cp -r xfce4 /home/$real_user/.config/
 
 
