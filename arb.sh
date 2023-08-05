@@ -64,12 +64,14 @@ make install
 cp src/docklike.desktop /usr/share/xfce4/panel/plugins
 cp src/.libs/libdocklike.so /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/
 cp src/libdocklike.la /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins
+cd ..
 
 # Installing and Configuring Findex
 apt install libkeybinder-3.0-dev cargo -y
 git clone https://github.com/mdgaziur/findex.git
 cd findex
 ./installer.sh
+cd ..
 
 # Installing Lock Screen
 apt install i3lock-color -y
