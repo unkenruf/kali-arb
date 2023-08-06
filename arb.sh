@@ -49,30 +49,24 @@ cp home-config/.Xresources /home/$real_user/
 cp gtk.css /home/$real_user/.config/gtk-3.0
 cp -r genmon-scripts /home/$real_user
 mv /home/$real_user/.config/xfce4 /home/$real_user/.config/xfce4.old
-sed -i "s/kali/$USER/g" xfce4/panel/genmon*
-sed -i "s/kali/$USER/g" xfce4/panel/whisker*
-sed -i "s/kali/$USER/g" xfce4/panel/launcher-1/*
+sed -i "s/kali/$real_user/g" xfce4/panel/genmon*
+sed -i "s/kali/$real_user/g" xfce4/panel/whisker*
+sed -i "s/kali/$real_user/g" xfce4/panel/launcher-1/*
 cp -r xfce4 /home/$real_user/.config/
 
 
 ## Dock-like Plugin
 apt install xfce4-dev-tools libstartup-notification0-dev libwnck-3-dev libxfce4ui-2-dev libxfce4panel-2.0-dev -y
 git clone https://gitlab.xfce.org/panel-plugins/xfce4-docklike-plugin.git
-cd xfce4-docklike-plugin
-./autogen.sh --prefix=/usr/local
-make
-make install
+(cd xfce4-docklike-plugin && ./autogen.sh --prefix=/usr/local && make && make install)
 cp src/docklike.desktop /usr/share/xfce4/panel/plugins
 cp src/.libs/libdocklike.so /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/
 cp src/libdocklike.la /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins
-cd ..
 
 # Installing and Configuring Findex
 apt install libkeybinder-3.0-dev cargo -y
 git clone https://github.com/mdgaziur/findex.git
-cd findex
-./installer.sh
-cd ..
+(cd findex && ./installer.sh)
 
 # Installing Lock Screen
 apt install i3lock-color -y

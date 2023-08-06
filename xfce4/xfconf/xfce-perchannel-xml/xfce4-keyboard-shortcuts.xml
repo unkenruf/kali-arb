@@ -56,7 +56,7 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="xfce4-taskmanager"/>
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="&lt;Super&gt;Return" type="string" value="exo-open --launch TerminalEmulator"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;s" type="string" value="xfce4-screenshooter"/>
+      <property name="&lt;Super&gt;&lt;Shift&gt;s" type="string" value="xfce4-screenshooter"/>
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="&lt;Super&gt;c" type="string" value="picom_toggle"/>
       <property name="&lt;Shift&gt;s" type="empty" value="eww open --toggle sidebar"/>
