@@ -23,7 +23,8 @@ sudo -u $real_user unzip Nordzy-cyan-dark-MOD.zip
 sudo -u $real_user cp -r Nordzy-cyan-dark-MOD /home/$real_user/.local/share/icons
 git clone https://github.com/alvatip/Radioactive-nord.git
 (cd Radioactive-nord && ./install.sh)
-sudo -u $real_user unzip fonts.zip -d /home/$real_user/.local/share/
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+sudo -u $real_user tar xf JetBrainsMono.tar.xz -C ~/.local/share/fonts/
 
 # Installing Kvantum theme and fonts
 apt install qt5-style-kvantum qt5-style-kvantum-themes -y
